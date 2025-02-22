@@ -1,1 +1,1 @@
-# kata_category_9_banco_bogota
+# kata-category-9
