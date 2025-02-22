@@ -13,3 +13,5 @@ jobs:
     with:
       repository: "kata-category-9"
       java-version: "23"
+      command-install: ""
+      command-execute: ""
