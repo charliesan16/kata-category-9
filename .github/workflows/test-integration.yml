@@ -13,5 +13,5 @@ jobs:
     with:
       repository: "kata-category-9"
       java-version: "23"
-      command-install: " "
-      command-execute: " "
+      command-install: 'mvn clean install -DskipTests'
+      command-execute: 'mvn clean test -P Regresion'
