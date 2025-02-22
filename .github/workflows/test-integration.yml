@@ -1,0 +1,17 @@
+name: automated-testing
+
+on:
+  push:
+    branches:
+      - master
+      - staging
+      - feature/add-test-kata
+
+jobs:
+  run-automated-tests:
+    uses: charliesan16/pipeline-reusable-kata-categoria-9/.github/workflows/reusable-ci-tests.yml@master
+    with:
+      repository: "kata-category-9"
+      java-version: "23"
+      command-install: ""
+      command-execute: ""
