@@ -6,3 +6,6 @@
 *.iml
 out
 gen
+
+sun_checks.xml
+sonar-project-custom.properties

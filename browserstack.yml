@@ -1,0 +1,30 @@
+framework: testng
+platforms:
+  - browserName: Chrome
+    os: Windows
+    osVersion: 11
+    browserVersion: latest
+buildName: "Kata_Daniel"
+projectName: "Kata Categoria IX"
+testContextOptions:
+  skipSessionName: true
+buildIdentifier: null
+debug: false
+networkLogs: false
+consoleLogs: errors
+testObservability: false
+browserstackLocal: false
+geoLocation: CO
+selfHeal: true
+autoWait: 10
+testOrchestrationOptions:
+  retryTestsOnFailure:
+    enabled: true
+    maxRetries: 0
+  runPreviouslyFailedFirst: true
+  abortBuildOnFailure:
+    enabled: true
+chromeOptions:
+  args:
+    - --start-maximized
+browserstackAutomation: true
