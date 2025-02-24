@@ -1,5 +1,3 @@
-userName: csanc_EaUjkS
-accessKey: Ax6ijmxWxMsZc6zxm2YJ
 framework: testng
 platforms:
   - browserName: Chrome

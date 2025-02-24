@@ -135,7 +135,7 @@ public final class Locators {
         /**
          * The constant Locator_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER.
          */
-        public static final By LOCATOR_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER = By.xpath("//div[contains(@class, 'oxd-autocomplete-dropdown')]//div[contains(normalize-space(), 'Henry Middle name Last Name')]\n");
+        public static final By LOCATOR_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER = By.xpath("//div[contains(@class, 'oxd-autocomplete-dropdown')]//div[contains(normalize-space(), 'FirstNameTest Middle Name3 LastNameTest')]\n");
         /**
          * The constant LOCATOR_INPUT_USERNAME_CREATE_USER.
          */
