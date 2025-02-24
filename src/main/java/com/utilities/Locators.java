@@ -82,6 +82,16 @@ public final class Locators {
          * The constant TEXT_ADD_USER.
          */
         public static final String TEXT_ADD_USER = "Add User";
+        /**
+         * The constant LOCATOR_EDIT_USER_TEXT.
+         */
+        public static final By LOCATOR_EDIT_USER_TEXT = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > h6");
+
+        /**
+         * The constant TEXT_ADD_USER.
+         */
+        public static final String TEXT_EDIT_USER = "Edit User";
+
 
         /**
          * The constant LOCATOR_BUTTON_DROPDOWN_LIST_ROLE.
@@ -125,7 +135,7 @@ public final class Locators {
         /**
          * The constant Locator_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER.
          */
-        public static final By LOCATOR_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER = By.xpath("//div[contains(@class, 'oxd-autocomplete-dropdown')]//div[contains(normalize-space(), 'Orange Test')]\n");
+        public static final By LOCATOR_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER = By.xpath("//div[contains(@class, 'oxd-autocomplete-dropdown')]//div[contains(normalize-space(), 'Henry Middle name Last Name')]\n");
         /**
          * The constant LOCATOR_INPUT_USERNAME_CREATE_USER.
          */
@@ -135,5 +145,35 @@ public final class Locators {
          * The constant LOCATOR_BUTTON_SAVE_CREATE_USER.
          */
         public static final By LOCATOR_BUTTON_SAVE_CREATE_USER = By.xpath("//button[contains(@class, 'oxd-button--secondary')]");
+
+        /**
+         * The constant LOCATOR_VALIDATE_USER.
+         */
+        public static final By LOCATOR_VALIDATE_USER = By.xpath("//div[@class='oxd-table-cell oxd-padding-cell']//div[text()='1daniel1234']/ancestor::div[contains(@class, 'oxd-table-row')]");
+        /**
+         * The constant LOCATOR_VALIDATE_CREATE_USER.
+         */
+        public static final By LOCATOR_VALIDATE_CREATE_USER = By.xpath("//div[@class='oxd-table']//div[contains(@class,'oxd-table-cell')][normalize-space()='1daniel1234']\n");
+
+
+        /**
+         * The constant LOCATOR_BUTTON_EDIT_USER.
+         */
+        public static final By LOCATOR_BUTTON_EDIT_USER = By.xpath(".//button[contains(@class, 'oxd-icon-button') and .//i[contains(@class, 'bi-pencil-fill')]]");
+
+        /**
+         * The constant LOCATOR_BUTTON_DELETE_USER.
+         */
+        public static final By LOCATOR_BUTTON_DELETE_USER = By.xpath(".//button[contains(@class, 'oxd-icon-button') and .//i[contains(@class, 'bi-trash')]]");
+
+        /**
+         * The constant LOCATOR_BUTTON_CONFIRM_DELETE_USER.
+         */
+        public static final By LOCATOR_BUTTON_CONFIRM_DELETE_USER = By.cssSelector("#app > div.oxd-overlay.oxd-overlay--flex.oxd-overlay--flex-centered > div > div > div > div.orangehrm-modal-footer > button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin");
+
+        /**
+         * The constant LOCATOR_CHECK_BOX_CHANGE_PASSWORD.
+         */
+        public static final By LOCATOR_CHECK_BOX_CHANGE_PASSWORD = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row > div > div:nth-child(5) > div > div:nth-child(2) > div > label > span");
     }
 }

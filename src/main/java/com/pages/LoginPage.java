@@ -57,6 +57,7 @@ public class LoginPage {
             interactionLocators.findElementJavascriptSendKeys(Locators.LoginPage.LOCATOR_INPUT_USERNAME, username);
             //test.log(LogStatus.INFO, "Termino de ingresar valor en el input USERNAME");
         } catch (AssertionError e) {
+            throw e;
             //test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input UserName : " + e.getMessage());
         }
     }
@@ -72,6 +73,7 @@ public class LoginPage {
             interactionLocators.findElementJavascriptSendKeys(Locators.LoginPage.LOCATOR_INPUT_PASSWORD, password);
             //test.log(LogStatus.INFO, "Termino de ingresar valor en el input PASSWORD");
         } catch (AssertionError e) {
+            throw e;
             //test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input PassWord : " + e.getMessage());
         }
 
@@ -86,6 +88,7 @@ public class LoginPage {
             interactionLocators.findElementJavascriptClick(Locators.LoginPage.LOCATOR_BUTTON_LOGIN);
             //test.log(LogStatus.INFO, "Dio Click en el botón Login");
         } catch (AssertionError e) {
+            throw e;
             //test.log(LogStatus.ERROR, "No se pudo dar click en el botón : " + e.getMessage());
         }
     }
@@ -99,6 +102,7 @@ public class LoginPage {
             interactionLocators.findElementJavascriptGetText(Locators.LoginPage.LOCATOR_TEXT_INVALID_CREDENTIALS, Locators.LoginPage.TEXT_INVALID_CREDENTIALS);
             //test.log(LogStatus.INFO, "Se logró comparar los dos textos y concuerdan.");
         } catch (AssertionError e) {
+            throw e;
             //test.log(LogStatus.ERROR, "No se pudo comparar los textos : " + e.getMessage());
         }
     }
@@ -112,6 +116,7 @@ public class LoginPage {
             interactionLocators.findElementJavascriptGetText(Locators.LoginPage.LOCATOR_USERNAME_TEXT_REQUIRED, Locators.LoginPage.TEXT_REQUIRED);
             //test.log(LogStatus.INFO, "Se logró comparar los dos textos y concuerdan.");
         } catch (AssertionError e) {
+            throw e;
             //test.log(LogStatus.ERROR, "No se pudo comparar los textos : " + e.getMessage());
         }
     }
@@ -125,6 +130,7 @@ public class LoginPage {
             interactionLocators.findElementJavascriptGetText(Locators.LoginPage.LOCATOR_PASSWORD_TEXT_REQUIRED, Locators.LoginPage.TEXT_REQUIRED);
             //test.log(LogStatus.INFO, "Se logró comparar los dos textos y concuerdan.");
         } catch (AssertionError e) {
+            throw e;
             //test.log(LogStatus.ERROR, "No se pudo comparar los textos : " + e.getMessage());
         }
     }

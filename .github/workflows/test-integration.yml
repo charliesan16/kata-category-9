@@ -9,9 +9,16 @@ on:
 
 jobs:
   run-automated-tests:
+    strategy:
+      max-parallel: 2
+      fail-fast: false
+      matrix:
+        include:
+          - commands: 'mvn clean test -P loginPage'
+          - commands: 'mvn clean test -P createUser'
     uses: charliesan16/pipeline-reusable-kata-categoria-9/.github/workflows/reusable-ci-tests.yml@master
     with:
       repository: "kata-category-9"
       java-version: "23"
       command-install: 'mvn clean install -DskipTests'
-      command-execute: 'mvn clean test -P Regresion'
+      command-execute: ${{ matrix.commands }}
