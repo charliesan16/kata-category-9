@@ -121,15 +121,19 @@ public final class Locators {
         /**
          * The constant LOCATOR_INPUT_EMPLOYEE_NAME_CREATE_USER.
          */
-        public static final By LOCATOR_INPUT_EMPLOYEE_NAME_CREATE_USER = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div:nth-child(2) > div > div:nth-child(2) > div > div");
+        public static final By LOCATOR_INPUT_EMPLOYEE_NAME_CREATE_USER = By.xpath("//input[@placeholder='Type for hints...']");
         /**
          * The constant Locator_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER.
          */
-        public static final By LOCATOR_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER = By.xpath("//div[contains(@class, 'oxd-autocomplete-dropdown')]//div[text()='Orange Test']");
+        public static final By LOCATOR_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER = By.xpath("//div[contains(@class, 'oxd-autocomplete-dropdown')]//div[contains(normalize-space(), 'Orange Test')]\n");
         /**
          * The constant LOCATOR_INPUT_USERNAME_CREATE_USER.
          */
         public static final By LOCATOR_INPUT_USERNAME_CREATE_USER = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div:nth-child(4) > div > div:nth-child(2) > input");
 
+        /**
+         * The constant LOCATOR_BUTTON_SAVE_CREATE_USER.
+         */
+        public static final By LOCATOR_BUTTON_SAVE_CREATE_USER = By.xpath("//button[contains(@class, 'oxd-button--secondary')]");
     }
 }

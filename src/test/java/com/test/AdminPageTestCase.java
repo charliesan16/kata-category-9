@@ -4,21 +4,12 @@ import com.pages.AdminPage;
 import com.pages.LoginPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.utilities.InteractionLocators;
-import com.utilities.Locators;
 import com.utilities.Utils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
-import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -30,12 +21,7 @@ public class AdminPageTestCase {
     private Utils utils;
     private LoginPage loginPage;
     private AdminPage adminPage;
-    private InteractionLocators interactionLocators;
-    private ExtentReports report;
-    /**
-     * logger.
-     */
-    private static final Logger UTILS_LOGGER = Logger.getLogger("InteractionLocators");
+
 
     /**
      * Before method.
@@ -49,7 +35,6 @@ public class AdminPageTestCase {
         driver.set(utils.createRemoteDriver(caso));
         loginPage = new LoginPage(driver.get());
         adminPage = new AdminPage(driver.get());
-        interactionLocators = new InteractionLocators(driver.get());
         driver.get().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
@@ -72,13 +57,11 @@ public class AdminPageTestCase {
             adminPage.selectUserRoleAdminDropDown();
             adminPage.selectUserStatusEnabledDropDown();
             adminPage.inputPasswordCreateUser("daniel123");
-            adminPage.inputEmployeeNameCreateUser("Orange Test");
+            adminPage.inputEmployeeNameCreateUser("Orange");
             adminPage.inputUserNameCreateUser("1daniel1234");
             adminPage.inputConfirmPasswordCreateUser("daniel123");
-
-
-
-            utils.pause(5000);
+            adminPage.buttonSaveUser();
+            utils.waitForPageLoad(driver.get());
             utils.markTestStatusBrowserStack("passed", "Resultado esperado", driver.get());
         } catch (Exception e) {
             utils.markTestStatusBrowserStack("failed", "Resultado inesperado", driver.get());

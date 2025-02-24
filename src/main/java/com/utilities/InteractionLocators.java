@@ -67,7 +67,7 @@ public class InteractionLocators {
             // Disparar eventos para simular una escritura real
             js.executeScript("arguments[0].dispatchEvent(new Event('input', { bubbles: true }));", element);
             js.executeScript("arguments[0].dispatchEvent(new Event('change', { bubbles: true }));", element);
-            js.executeScript("arguments[0].dispatchEvent(new Event('blur', { bubbles: true }));", element); // Simular que el usuario dejó el campo
+            //js.executeScript("arguments[0].dispatchEvent(new Event('blur', { bubbles: true }));", element); // Simular que el usuario dejó el campo
 
         } catch (TimeoutException e) {
             throw new AssertionError("COMMENT_TIME_OUT: " + by.toString(), e);

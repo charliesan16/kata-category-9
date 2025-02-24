@@ -21,6 +21,7 @@ public class AdminPage {
      */
     private InteractionLocators interactionLocators;
 
+
     /**
      * Instantiates a new Admin page.
      *
@@ -151,6 +152,11 @@ public class AdminPage {
     }
 
 
+    /**
+     * Input employee name create user.
+     *
+     * @param name the name
+     */
     public void inputEmployeeNameCreateUser(final String name) {
         try {
             //test.log(LogStatus.INFO, "Intenta dar click en el dropdwon EmployeeName.");
@@ -163,6 +169,12 @@ public class AdminPage {
             //test.log(LogStatus.ERROR, "No se pudo seleccionar la opción EmployeeName : " + e.getMessage());
         }
     }
+
+    /**
+     * Input user name create user.
+     *
+     * @param name the name
+     */
     public void inputUserNameCreateUser(final String name) {
         try {
             //test.log(LogStatus.INFO, "Digita valor en el input username");
@@ -170,6 +182,19 @@ public class AdminPage {
             //test.log(LogStatus.INFO, "Termino de ingresar valor en el input username");
         } catch (AssertionError e) {
             //test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input username : " + e.getMessage());
+        }
+    }
+
+    /**
+     * Button save user.
+     */
+    public void buttonSaveUser() {
+        try {
+            //test.log(LogStatus.INFO, "Intenta dar click en el botón save.");
+            interactionLocators.findElementJavascriptClick(Locators.AdminPage.LOCATOR_BUTTON_SAVE_CREATE_USER);
+            //test.log(LogStatus.INFO, "Termino de dar click en el botón save.");
+        } catch (AssertionError e) {
+            //test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
         }
     }
 

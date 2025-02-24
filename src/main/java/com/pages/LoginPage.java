@@ -1,10 +1,7 @@
 package com.pages;
 
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 import com.utilities.InteractionLocators;
 import com.utilities.Locators;
-import com.utilities.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
@@ -22,7 +19,6 @@ public class LoginPage {
      * Instancia Clase interactionLocator.
      */
     private InteractionLocators interactionLocators;
-    private Utils utils;
 
     /**
      * Instantiates a new Login page.
@@ -32,7 +28,6 @@ public class LoginPage {
     public LoginPage(final WebDriver newWebDriver) {
         driverSetup(newWebDriver);
         this.interactionLocators = new InteractionLocators(newWebDriver);
-        this.utils = new Utils();
         PageFactory.initElements(new AjaxElementLocatorFactory(newWebDriver, 5), this);
     }
 
