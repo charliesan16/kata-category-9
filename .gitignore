@@ -9,3 +9,5 @@ gen
 
 sun_checks.xml
 sonar-project-custom.properties
+logs/*
+target

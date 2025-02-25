@@ -180,7 +180,7 @@
                         <version>${maven-surefire-plugin.version}</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>resources/loginPage.xml</suiteXmlFile>
+                                <suiteXmlFile>loginPage.xml</suiteXmlFile>
                             </suiteXmlFiles>
                             <argLine>-javaagent:"${com.browserstack:browserstack-java-sdk:jar}"</argLine>
                             <properties>
@@ -206,7 +206,7 @@
                         <version>${maven-surefire-plugin.version}</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>resources/createUser.xml</suiteXmlFile>
+                                <suiteXmlFile>createUser.xml</suiteXmlFile>
                             </suiteXmlFiles>
                             <argLine>-javaagent:"${com.browserstack:browserstack-java-sdk:jar}"</argLine>
                             <properties>

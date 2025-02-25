@@ -1,5 +1,7 @@
 package com.pages;
 
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.utilities.InteractionLocators;
 import com.utilities.Locators;
 import org.openqa.selenium.WebDriver;
@@ -52,125 +54,141 @@ public class AdminPage {
 
     /**
      * Select option admin.
+     *
+     * @param test the test
      */
-    public void selectOptionAdmin() {
+    public void selectOptionAdmin(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta seleccionar la opción admin.");
+            test.log(LogStatus.INFO, "Intenta seleccionar la opción admin.");
             interactionLocators.findElementJavascriptClick(Locators.AdminPage.LOCATOR_BUTTON_ADMIN);
-            //test.log(LogStatus.INFO, "Ingresó a la ventana de admin.");
+            test.log(LogStatus.INFO, "Ingresó a la ventana de admin.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo seleccionar la opción Admin : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo seleccionar la opción Admin : " + e.getMessage());
         }
     }
 
     /**
      * Select option add users.
+     *
+     * @param test the test
      */
-    public void selectOptionAddUsers() {
+    public void selectOptionAddUsers(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta seleccionar la opción agregar usuarios.");
+            test.log(LogStatus.INFO, "Intenta seleccionar la opción agregar usuarios.");
             interactionLocators.findElementJavascriptClick(Locators.AdminPage.LOCATOR_BUTTON_ADD_USER);
-            //test.log(LogStatus.INFO, "Ingresó a la ventana de agregar usuarios.");
+            test.log(LogStatus.INFO, "Ingresó a la ventana de agregar usuarios.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo seleccionar la opción agregar usuarios : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo seleccionar la opción agregar usuarios : " + e.getMessage());
         }
     }
 
     /**
      * Validate text add user.
+     *
+     * @param test the test
      */
-    public void validateTextAddUser() {
+    public void validateTextAddUser(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta validar el texto de add user, despues de a ver dado click en la opción.");
+            test.log(LogStatus.INFO, "Intenta validar el texto de add user, despues de a ver dado click en la opción.");
             interactionLocators.findElementJavascriptGetText(Locators.AdminPage.LOCATOR_ADD_USER_TEXT, Locators.AdminPage.TEXT_ADD_USER);
-            //test.log(LogStatus.INFO, "Se validó el texto add user");
+            test.log(LogStatus.INFO, "Se validó el texto add user");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo validar el texto Add User : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo validar el texto Add User : " + e.getMessage());
         }
     }
 
     /**
      * Validate text Edit user.
+     *
+     * @param test the test
      */
-    public void validateTextEditUser() {
+    public void validateTextEditUser(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta validar el texto de edit user, despues de a ver dado click en la opción.");
+            test.log(LogStatus.INFO, "Intenta validar el texto de edit user, despues de a ver dado click en la opción.");
             interactionLocators.findElementJavascriptGetText(Locators.AdminPage.LOCATOR_EDIT_USER_TEXT, Locators.AdminPage.TEXT_EDIT_USER);
-            //test.log(LogStatus.INFO, "Se validó el texto edit user");
+            test.log(LogStatus.INFO, "Se validó el texto edit user");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo validar el texto edit User : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo validar el texto edit User : " + e.getMessage());
         }
     }
 
     /**
      * Select user role admin drop down.
+     *
+     * @param test the test
      */
-    public void selectUserRoleAdminDropDown() {
+    public void selectUserRoleAdminDropDown(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta dar click en el dropdwon Role.");
+            test.log(LogStatus.INFO, "Intenta dar click en el dropdwon Role.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_BUTTON_DROPDOWN_LIST_ROLE);
-            //test.log(LogStatus.INFO, "Se desplego el dropdwon Role.");
-            //test.log(LogStatus.INFO, "Intenta dar click en la opcion Admin.");
+            test.log(LogStatus.INFO, "Se desplego el dropdwon Role.");
+            test.log(LogStatus.INFO, "Intenta dar click en la opcion Admin.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_OPTION_LIST_ROLE_ADMIN);
-            //test.log(LogStatus.INFO, "Selecciono la opción Admin");
+            test.log(LogStatus.INFO, "Selecciono la opción Admin");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo seleccionar la opción Admin : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo seleccionar la opción Admin : " + e.getMessage());
         }
     }
 
     /**
      * Select user role ess drop down.
+     *
+     * @param test the test
      */
-    public void selectUserRoleEssDropDown() {
+    public void selectUserRoleEssDropDown(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta dar click en el dropdwon Role.");
+            test.log(LogStatus.INFO, "Intenta dar click en el dropdwon Role.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_BUTTON_DROPDOWN_LIST_ROLE);
-            //test.log(LogStatus.INFO, "Se desplego el dropdwon Role.");
-            //test.log(LogStatus.INFO, "Intenta dar click en la opcion ESS.");
+            test.log(LogStatus.INFO, "Se desplego el dropdwon Role.");
+            test.log(LogStatus.INFO, "Intenta dar click en la opcion ESS.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_OPTION_LIST_ROLE_ESS);
-            //test.log(LogStatus.INFO, "Selecciono la opción ESS");
+            test.log(LogStatus.INFO, "Selecciono la opción ESS");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo seleccionar la opción ESS : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo seleccionar la opción ESS : " + e.getMessage());
         }
     }
 
     /**
      * Select user status enabled drop down.
+     *
+     * @param test the test
      */
-    public void selectUserStatusEnabledDropDown() {
+    public void selectUserStatusEnabledDropDown(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta dar click en el dropdwon Status.");
+            test.log(LogStatus.INFO, "Intenta dar click en el dropdwon Status.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_BUTTON_DROPDOWN_LIST_STATUS);
-            //test.log(LogStatus.INFO, "Se desplego el dropdwon Status.");
-            //test.log(LogStatus.INFO, "Intenta dar click en la opcion Enabled.");
+            test.log(LogStatus.INFO, "Se desplego el dropdwon Status.");
+            test.log(LogStatus.INFO, "Intenta dar click en la opcion Enabled.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_OPTION_LIST_STATUS_ENABLED);
-            //test.log(LogStatus.INFO, "Selecciono la opción Enabled");
+            test.log(LogStatus.INFO, "Selecciono la opción Enabled");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo seleccionar la opción Enabled : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo seleccionar la opción Enabled : " + e.getMessage());
         }
     }
 
     /**
      * Select user status disabled drop down.
+     *
+     * @param test the test
      */
-    public void selectUserStatusDisabledDropDown() {
+    public void selectUserStatusDisabledDropDown(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta dar click en el dropdwon Status.");
+            test.log(LogStatus.INFO, "Intenta dar click en el dropdwon Status.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_BUTTON_DROPDOWN_LIST_STATUS);
-            //test.log(LogStatus.INFO, "Se desplego el dropdwon Status.");
-            //test.log(LogStatus.INFO, "Intenta dar click en la opcion Disabled.");
+            test.log(LogStatus.INFO, "Se desplego el dropdwon Status.");
+            test.log(LogStatus.INFO, "Intenta dar click en la opcion Disabled.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_OPTION_LIST_STATUS_DISABLED);
-            //test.log(LogStatus.INFO, "Selecciono la opción Disabled");
+            test.log(LogStatus.INFO, "Selecciono la opción Disabled");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo seleccionar la opción Disabled : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo seleccionar la opción Disabled : " + e.getMessage());
         }
     }
 
@@ -178,15 +196,16 @@ public class AdminPage {
      * Input password create user.
      *
      * @param password the password
+     * @param test     the test
      */
-    public void inputPasswordCreateUser(final String password) {
+    public void inputPasswordCreateUser(final String password, final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Digita valor en el input password");
+            test.log(LogStatus.INFO, "Digita valor en el input password");
             interactionLocators.findElementJavascriptSendKeys(Locators.AdminPage.LOCATOR_INPUT_PASSWORD_CREATE_USER, password);
-            //test.log(LogStatus.INFO, "Termino de ingresar valor en el input password");
+            test.log(LogStatus.INFO, "Termino de ingresar valor en el input password");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input password : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input password : " + e.getMessage());
         }
     }
 
@@ -194,15 +213,16 @@ public class AdminPage {
      * Input confirm password create user.
      *
      * @param password the password
+     * @param test     the test
      */
-    public void inputConfirmPasswordCreateUser(final String password) {
+    public void inputConfirmPasswordCreateUser(final String password, final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Digita valor en el input confirm password");
+            test.log(LogStatus.INFO, "Digita valor en el input confirm password");
             interactionLocators.findElementJavascriptSendKeys(Locators.AdminPage.LOCATOR_INPUT_CONFIRM_PASSWORD_CREATE_USER, password);
-            //test.log(LogStatus.INFO, "Termino de ingresar valor en el input confirm password");
+            test.log(LogStatus.INFO, "Termino de ingresar valor en el input confirm password");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input confirm password : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input confirm password : " + e.getMessage());
         }
     }
 
@@ -211,18 +231,19 @@ public class AdminPage {
      * Input employee name create user.
      *
      * @param name the name
+     * @param test the test
      */
-    public void inputEmployeeNameCreateUser(final String name) {
+    public void inputEmployeeNameCreateUser(final String name, final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta dar click en el dropdwon EmployeeName.");
+            test.log(LogStatus.INFO, "Intenta dar click en el dropdwon EmployeeName.");
             interactionLocators.findElementJavascriptSendKeys(Locators.AdminPage.LOCATOR_INPUT_EMPLOYEE_NAME_CREATE_USER, name);
-            //test.log(LogStatus.INFO, "Se desplego el dropdwon EmployeeNames.");
-            //test.log(LogStatus.INFO, "Intenta dar click en la opcion EmployeeName.");
+            test.log(LogStatus.INFO, "Se desplego el dropdwon EmployeeNames.");
+            test.log(LogStatus.INFO, "Intenta dar click en la opcion EmployeeName.");
             interactionLocators.findElementJavascriptClickDropDown(Locators.AdminPage.LOCATOR_INPUT_EMPLOYEE_NAME_OPTION_CREATE_USER);
-            //test.log(LogStatus.INFO, "Selecciono la opción EmployeeName");
+            test.log(LogStatus.INFO, "Selecciono la opción EmployeeName");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No se pudo seleccionar la opción EmployeeName : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No se pudo seleccionar la opción EmployeeName : " + e.getMessage());
         }
     }
 
@@ -230,29 +251,32 @@ public class AdminPage {
      * Input user name create user.
      *
      * @param name the name
+     * @param test the test
      */
-    public void inputUserNameCreateUser(final String name) {
+    public void inputUserNameCreateUser(final String name, final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Digita valor en el input username");
+            test.log(LogStatus.INFO, "Digita valor en el input username");
             interactionLocators.findElementJavascriptSendKeys(Locators.AdminPage.LOCATOR_INPUT_USERNAME_CREATE_USER, name);
-            //test.log(LogStatus.INFO, "Termino de ingresar valor en el input username");
+            test.log(LogStatus.INFO, "Termino de ingresar valor en el input username");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input username : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input username : " + e.getMessage());
         }
     }
 
     /**
      * Button save user.
+     *
+     * @param test the test
      */
-    public void buttonSaveUser() {
+    public void buttonSaveUser(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta dar click en el botón save.");
+            test.log(LogStatus.INFO, "Intenta dar click en el botón save.");
             interactionLocators.findElementJavascriptClick(Locators.AdminPage.LOCATOR_BUTTON_SAVE_CREATE_USER);
-            //test.log(LogStatus.INFO, "Termino de dar click en el botón save.");
+            test.log(LogStatus.INFO, "Termino de dar click en el botón save.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
         }
     }
 
@@ -260,16 +284,17 @@ public class AdminPage {
      * Validate save user.
      *
      * @param name the name
+     * @param test the test
      */
-    public void validateSaveUser(final String name) {
+    public void validateSaveUser(final String name, final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
             interactionLocators.isElementPresent(Locators.AdminPage.LOCATOR_VALIDATE_CREATE_USER, name);
             //interactionLocators.isUserPresentAndStatusCorrect(Locators.AdminPage.LOCATOR_VALIDATE_CREATE_USER, name,  status);
-            //test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
         }
     }
 
@@ -277,16 +302,17 @@ public class AdminPage {
      * Validate delete user.
      *
      * @param name the name
+     * @param test the test
      */
-    public void validateDeleteUser(final String name) {
+    public void validateDeleteUser(final String name, final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
             interactionLocators.isElementNotPresent(Locators.AdminPage.LOCATOR_VALIDATE_CREATE_USER, name);
             //interactionLocators.isUserPresentAndStatusCorrect(Locators.AdminPage.LOCATOR_VALIDATE_CREATE_USER, name,  status);
-            //test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
         }
     }
 
@@ -294,15 +320,16 @@ public class AdminPage {
      * Edit user.
      *
      * @param name the name
+     * @param test the test
      */
-    public void editUser(final String name) {
+    public void editUser(final String name, final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
             interactionLocators.clickButtonInUserRow(Locators.AdminPage.LOCATOR_VALIDATE_USER, Locators.AdminPage.LOCATOR_BUTTON_EDIT_USER, name);
-            //test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
         }
     }
 
@@ -310,43 +337,48 @@ public class AdminPage {
      * Delete user.
      *
      * @param name the name
+     * @param test the test
      */
-    public void deleteUser(final String name) {
+    public void deleteUser(final String name, final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
             interactionLocators.clickButtonInUserRow(Locators.AdminPage.LOCATOR_VALIDATE_USER, Locators.AdminPage.LOCATOR_BUTTON_DELETE_USER, name);
-            //test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
         }
     }
 
     /**
      * Confirm delete user.
+     *
+     * @param test the test
      */
-    public void confirmDeleteUser() {
+    public void confirmDeleteUser(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
             interactionLocators.findElementJavascriptClick(Locators.AdminPage.LOCATOR_BUTTON_CONFIRM_DELETE_USER);
-            //test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
         }
     }
 
     /**
      * Button check box change password.
+     *
+     * @param test the test
      */
-    public void buttonCheckBoxChangePassword() {
+    public void buttonCheckBoxChangePassword(final ExtentTest test) {
         try {
-            //test.log(LogStatus.INFO, "Intenta darle click en el botón checkbox para change password.");
+            test.log(LogStatus.INFO, "Intenta darle click en el botón checkbox para change password.");
             interactionLocators.findElementJavascriptClick(Locators.AdminPage.LOCATOR_CHECK_BOX_CHANGE_PASSWORD);
-            //test.log(LogStatus.INFO, "Termino de darle click en el botón checkbox para change password.");
+            test.log(LogStatus.INFO, "Termino de darle click en el botón checkbox para change password.");
         } catch (AssertionError e) {
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
             throw e;
-            //test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
         }
     }
 
