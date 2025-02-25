@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CreateUser" thread-count="1" parallel="tests">
+    <test name="CreateUserAdmin">
+        <classes>
+            <class name="com.test.AdminPageTestCase">
+                <methods>
+                    <include name="CreateUserAdmin"></include>
+                    <parameter name="Caso" value="CreateUserAdmin"></parameter>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ModifyUser">
+        <classes>
+            <class name="com.test.AdminPageTestCase">
+                <methods>
+                    <include name="ModifyUser"></include>
+                    <parameter name="Caso" value="ModifyUser"></parameter>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="RemoveUser">
+        <classes>
+            <class name="com.test.AdminPageTestCase">
+                <methods>
+                    <include name="RemoveUser"></include>
+                    <parameter name="Caso" value="RemoveUser"></parameter>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+
