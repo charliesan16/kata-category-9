@@ -62,7 +62,7 @@ public class AdminPageTestCase {
             adminPage.selectUserRoleAdminDropDown(test);
             adminPage.selectUserStatusEnabledDropDown(test);
             adminPage.inputPasswordCreateUser("daniel123",test);
-            adminPage.inputEmployeeNameCreateUser("first",test);
+            adminPage.inputEmployeeNameCreateUser("isaa",test);
             adminPage.inputUserNameCreateUser("1daniel1234",test);
             adminPage.inputConfirmPasswordCreateUser("daniel123",test);
             adminPage.buttonSaveUser(test);

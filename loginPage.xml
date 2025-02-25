@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login" thread-count="3" parallel="tests">
+    <test name="LoginInvalidCredentials">
+        <classes>
+            <class name="com.test.LoginPageTestCase">
+                <methods>
+                    <include name="LoginInvalidCredentials"></include>
+                    <parameter name="Caso" value="LoginInvalidCredentials"></parameter>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="LoginUserNameRequired">
+        <classes>
+            <class name="com.test.LoginPageTestCase">
+                <methods>
+                    <include name="LoginUserNameRequired"></include>
+                    <parameter name="Caso" value="LoginUserNameRequired"></parameter>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="LoginInputsEmptyRequired">
+        <classes>
+            <class name="com.test.LoginPageTestCase">
+                <methods>
+                    <include name="LoginInputsEmptyRequired"></include>
+                    <parameter name="Caso" value="LoginInputsEmptyRequired"></parameter>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+

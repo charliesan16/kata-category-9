@@ -200,9 +200,9 @@ public class AdminPage {
      */
     public void inputPasswordCreateUser(final String password, final ExtentTest test) {
         try {
-            test.log(LogStatus.INFO, "Digita valor en el input password");
+            test.log(LogStatus.INFO, "Digita valor en el input password para editar");
             interactionLocators.findElementJavascriptSendKeys(Locators.AdminPage.LOCATOR_INPUT_PASSWORD_CREATE_USER, password);
-            test.log(LogStatus.INFO, "Termino de ingresar valor en el input password");
+            test.log(LogStatus.INFO, "Termino de ingresar valor en el input password para editar");
         } catch (AssertionError e) {
             test.log(LogStatus.ERROR, "El valor no se pudo digitar en el input password : " + e.getMessage());
             throw e;
@@ -306,12 +306,12 @@ public class AdminPage {
      */
     public void validateDeleteUser(final String name, final ExtentTest test) {
         try {
-            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta validar que el usuario se elimino.");
             interactionLocators.isElementNotPresent(Locators.AdminPage.LOCATOR_VALIDATE_CREATE_USER, name);
             //interactionLocators.isUserPresentAndStatusCorrect(Locators.AdminPage.LOCATOR_VALIDATE_CREATE_USER, name,  status);
-            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de validar que el usuario se elimino.");
         } catch (AssertionError e) {
-            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
+            test.log(LogStatus.ERROR, "El usuario aun esta en la lista : " + e.getMessage());
             throw e;
         }
     }
@@ -324,11 +324,11 @@ public class AdminPage {
      */
     public void editUser(final String name, final ExtentTest test) {
         try {
-            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta dar click en el botón editar el usuario.");
             interactionLocators.clickButtonInUserRow(Locators.AdminPage.LOCATOR_VALIDATE_USER, Locators.AdminPage.LOCATOR_BUTTON_EDIT_USER, name);
-            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de dar click en el botón editar el usuario.");
         } catch (AssertionError e) {
-            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón editar el usuario : " + e.getMessage());
             throw e;
         }
     }
@@ -341,11 +341,11 @@ public class AdminPage {
      */
     public void deleteUser(final String name, final ExtentTest test) {
         try {
-            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta dar click en el botón eliminar el usuario: .");
             interactionLocators.clickButtonInUserRow(Locators.AdminPage.LOCATOR_VALIDATE_USER, Locators.AdminPage.LOCATOR_BUTTON_DELETE_USER, name);
-            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de dar click en el botón eliminar el usuario.");
         } catch (AssertionError e) {
-            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón eliminar el usuario : " + e.getMessage());
             throw e;
         }
     }
@@ -357,11 +357,11 @@ public class AdminPage {
      */
     public void confirmDeleteUser(final ExtentTest test) {
         try {
-            test.log(LogStatus.INFO, "Intenta validar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Intenta dar click en el botón eliminar el usuario en la ventana de confirmación.");
             interactionLocators.findElementJavascriptClick(Locators.AdminPage.LOCATOR_BUTTON_CONFIRM_DELETE_USER);
-            test.log(LogStatus.INFO, "Termino de valdiar que el usuario se guardo.");
+            test.log(LogStatus.INFO, "Termino de dar click en el botón eliminar el usuario en la ventana de confirmació.");
         } catch (AssertionError e) {
-            test.log(LogStatus.ERROR, "No puedo dar click en el botón save : " + e.getMessage());
+            test.log(LogStatus.ERROR, "No puedo dar click en el botón eliminar el usuario en la ventana de confirmación : " + e.getMessage());
             throw e;
         }
     }
