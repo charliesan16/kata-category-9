@@ -1,13 +1,9 @@
-userName: csanc_EaUjkS
-accessKey: Ax6ijmxWxMsZc6zxm2YJ
 framework: testng
 platforms:
   - browserName: Chrome
     os: Windows
     osVersion: 11
     browserVersion: latest
-buildName: "Kata_Daniel"
-projectName: "Kata Categoria IX"
 testContextOptions:
   skipSessionName: true
 buildIdentifier: null
